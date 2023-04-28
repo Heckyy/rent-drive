@@ -36,9 +36,9 @@
 /* Search section */
 .search-section {
   position: relative;
-  top: -20px;
+  top: -50px;
 }
-.search-section .row {
+.search-section .box {
   border-radius: 3px;
   box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);
 }

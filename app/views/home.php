@@ -1,3 +1,11 @@
+<?php
+$date = new DateTime();
+$this_date = $date->format("Y-m-d");
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +31,7 @@
     <!-- Search Section -->
     <section class="search-section">
         <div class="container">
-            <div class="row bg-light">
+            <div class="row bg-light box">
                 <div class="col">
                     <div class="row p-3 d-flex justify-content-center">
                         <div class="col-lg-3">
@@ -46,13 +54,22 @@
                         </div>
                         <div class="col-lg-3">
                             <span class="text-search ms-1 mb-2">Start Date</span>
-                            <input type="date" name="" id="" class="form-control mt-2" value="2023-04-28">
+                            <input type="date" name="" id="" class="form-control mt-2" value="<?= $this_date; ?>">
                         </div>
                         <div class="col-lg-3">
                             <span class="text-search ms-1 mb-2">End Date</span>
-                            <input type="date" name="" id="" class="form-control mt-2" value="2023-04-28">
+                            <input type="date" name="" id="" class="form-control mt-2" value="<?= $this_date; ?>">
                         </div>
                     </div>
+
+                    <div class="row mb-4">
+                        <div class="col-md-12">
+                            <div class="d-flex justify-content-end">
+                                <button type="button" class="btn btn-primary w-10"><i class="fa-solid me-2 fa-magnifying-glass" style="color: #f6f7f9;"></i>Search Car</button>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

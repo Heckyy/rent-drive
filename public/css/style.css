@@ -1,0 +1,52 @@
+/* MyFonts */
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
+/* Navbar Section */
+.logo-brand {
+  font-family: "Bruno Ace", cursive;
+}
+
+/* End Of Navbar Section */
+
+/* Hero Section */
+.hero {
+  background-image: url("../images/background-mobil2.jpg") !important;
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+}
+.hero-title {
+  font-family: "Roboto Slab", serif;
+  font-size: 40px;
+  letter-spacing: 1px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.nav-link {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+/* End Of Hero Section */
+
+/* Search section */
+.search-section {
+  position: relative;
+  top: -20px;
+}
+.search-section .row {
+  border-radius: 3px;
+  box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);
+}
+
+.text-search {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+/* End of  Search section */

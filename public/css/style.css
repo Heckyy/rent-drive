@@ -50,3 +50,28 @@
 }
 
 /* End of  Search section */
+
+/*Book Section*/
+.title-book{
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+}
+
+.reservation button{
+border:none ;
+}
+/*End Of Book Section*/
+
+/*Footer Section*/
+.container-footer{
+  background-color: #0c6efd;
+}
+
+.title-footer{
+  font-family: "Roboto Slab", serif;
+  font-size: 24px;
+  letter-spacing: 1px;
+  color:white;
+}
+/*End Of Footer Section*/

@@ -31,7 +31,7 @@
                         <a class="nav-link me-2 text-dark" href="#">Cars</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="#">Booking</a>
+                        <a class="nav-link text-dark" href="#">Reservation</a>
                     </li>
                 </ul>
                 <div class="navbar-nav ">

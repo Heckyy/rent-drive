@@ -29,6 +29,9 @@ $this_date = $date->format("Y-m-d");
 
 
     <!-- Search Section -->
+    <?php
+
+    ?>
     <section class="search-section">
         <div class="container">
             <div class="row bg-light box">
@@ -82,104 +85,21 @@ $this_date = $date->format("Y-m-d");
 
     <!-- Book section -->
     <section class="book-section">
-        .<div class="container">
+        <div class="container">
             <div class="row mb-3">
                 <div class="col-lg-12">
                     <p class="title-book">Book Your Premuim Car <img src="public/images/stars.png" width="32" class="img-fluid" alt=""></p>
                 </div>
             </div>
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
+                <div class="carousel-inner" id="book-section">
                     <div class="carousel-item active">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="card">
-                                    <img src="product1.jpg" class="card-img-top" alt="Product 1">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Product 1</h5>
-                                        <p class="card-text">Description of product 1</p>
-                                        <a href="#" class="btn btn-primary">Buy Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="card">
-                                    <img src="product1.jpg" class="card-img-top" alt="Product 1">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Product 1</h5>
-                                        <p class="card-text">Description of product 1</p>
-                                        <a href="#" class="btn btn-primary">Buy Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="card">
-                                    <img src="product1.jpg" class="card-img-top" alt="Product 1">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Product 1</h5>
-                                        <p class="card-text">Description of product 1</p>
-                                        <a href="#" class="btn btn-primary">Buy Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="card">
-                                    <img src="product1.jpg" class="card-img-top" alt="Product 1">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Product 1</h5>
-                                        <p class="card-text">Description of product 1</p>
-                                        <a href="#" class="btn btn-primary">Buy Now</a>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="row"  id="carousel-item">
+
                             <!-- Add more product cards here -->
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="card">
-                                    <img src="product4.jpg" class="card-img-top" alt="Product 4">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Product 4</h5>
-                                        <p class="card-text">Description of product 4</p>
-                                        <a href="#" class="btn btn-primary">Buy Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="card">
-                                    <img src="product4.jpg" class="card-img-top" alt="Product 4">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Product 4</h5>
-                                        <p class="card-text">Description of product 4</p>
-                                        <a href="#" class="btn btn-primary">Buy Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="card">
-                                    <img src="product4.jpg" class="card-img-top" alt="Product 4">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Product 4</h5>
-                                        <p class="card-text">Description of product 4</p>
-                                        <a href="#" class="btn btn-primary">Buy Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="card">
-                                    <img src="product4.jpg" class="card-img-top" alt="Product 4">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Product 4</h5>
-                                        <p class="card-text">Description of product 4</p>
-                                        <a href="#" class="btn btn-primary">Buy Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Add more product cards here -->
-                        </div>
-                    </div>
+
                     <!-- Add more carousel items here -->
                 </div>
                 <button class="carousel-control-prev" type="button" style="background-color: #0c6efd; width: 15px;" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -248,9 +168,19 @@ $this_date = $date->format("Y-m-d");
                     </table>
                 </div>
             </div>
+            <div class="container mb-5">
+                <div class="row  justify-content-end">
+                    <div class="col-lg-1">
+                        <button class="btn btn-primary button-primary ">Book</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 <!--End My Reservation Section-->
+
+<!--Script-->
+<script src="public/js/home.js"></script>
 </body>
 
 </html>

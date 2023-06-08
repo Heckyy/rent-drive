@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1537fc65-1ae3-4dec-8666-90a1e570b964" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/book.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/edit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/reserve.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/stars.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/trash.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/bookController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/book.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,23 +31,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Applications/XAMPP/xamppfiles/htdocs/rent-drive",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.customizations",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Applications/XAMPP/xamppfiles/htdocs/rent-drive/public&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.customizations&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -69,7 +69,13 @@
       <workItem from="1682674101361" duration="1698000" />
       <workItem from="1682843468968" duration="205000" />
       <workItem from="1682843701316" duration="99000" />
-      <workItem from="1682908678996" duration="3675000" />
+      <workItem from="1682908678996" duration="4831000" />
+      <workItem from="1682923532246" duration="19000" />
+      <workItem from="1682923597756" duration="28000" />
+      <workItem from="1682923669603" duration="1119000" />
+      <workItem from="1683689884491" duration="2110000" />
+      <workItem from="1684910111643" duration="3352000" />
+      <workItem from="1685002839449" duration="131000" />
     </task>
     <servers />
   </component>

@@ -7,6 +7,8 @@
     <title><?= $data['title'] ?></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="public/css/style.css">
+    <!--    Jquery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Font AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -34,10 +36,16 @@
                         <a class="nav-link text-dark" href="#">Reservation</a>
                     </li>
                 </ul>
+                <?php
+                if(empty($_SESSION)){?>
                 <div class="navbar-nav ">
                     <button class="btn btn-primary me-lg-3 button-secondary bg-transparent text-primary">Sign In</button>
                     <button class="btn btn-primary button-primary ">login</button>
                 </div>
+                <?php }else{?>
+                    <p class="me-2 text-center">Hello, Hecky Riadi </p>
+                    <button class="btn btn-primary button-primary ">Logout</button>
+                <?php }?>
             </div>
         </div>
     </nav>

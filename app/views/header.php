@@ -36,16 +36,15 @@
                         <a class="nav-link text-dark" href="#">Reservation</a>
                     </li>
                 </ul>
-                <?php
-                if(empty($_SESSION)){?>
+
+
                 <div class="navbar-nav ">
-                    <button class="btn btn-primary me-lg-3 button-secondary bg-transparent text-primary">Sign In</button>
-                    <button class="btn btn-primary button-primary ">login</button>
+                    <button class="btn btn-primary me-lg-3 button-secondary bg-transparent text-primary" id="btn-signIn">Sign In</button>
+                    <a href="http://localhost/rent-drive/login"> <button class="btn btn-primary button-primary " id="btn-login">login</button> </a>
                 </div>
-                <?php }else{?>
-                    <p class="me-2 text-center">Hello, Hecky Riadi </p>
-                    <button class="btn btn-primary button-primary ">Logout</button>
-                <?php }?>
+                <h6 class="me-2 text-center d-none" id="user-info"> <b> Welcome! <span id=hello></span></b></h6>
+                    <button class="btn d-none btn-primary button-primary" id="btn-logout" onclick="btnLogout()">Logout</button>
+
             </div>
         </div>
     </nav>

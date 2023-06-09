@@ -21,5 +21,26 @@ $(document).ready(function() {
             bookSection.innerHTML = html;
         }
     });
+    // Check Session User,If User Already Login->Hide SignIn And Login Button at header!
+    // localStorage.removeItem("username");
+    // alert(localStorage.getItem("username"));
+    if (localStorage.getItem('username')){
+            var btnSign = document.getElementById("btn-signIn");
+            var btnLogin = document.getElementById("btn-login");
+            var info = document.getElementById("user-info");
+            var btnLogout = document.getElementById("btn-logout");
+            btnLogout.classList.remove("d-none");
+            info.classList.remove("d-none");
+            btnSign.classList.add("d-none");
+            btnLogin.classList.add("d-none");
+    }
+
+    var hello = document.getElementById("hello");
+    hello.innerHTML = localStorage.getItem("username");
 
 });
+
+function btnLogout(){
+    localStorage.removeItem("username");
+    window.location.href = "home";
+}

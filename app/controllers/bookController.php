@@ -7,6 +7,6 @@ class book extends Controller{
         ];
         $this->view("header",$data);
         $this->view("book",null);
-        $this->view("footer",null);
+
     }
 }

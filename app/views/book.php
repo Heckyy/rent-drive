@@ -1,67 +1,86 @@
+<?php
+$url = 'http://localhost/rent/api/v1/car/cars';
+$ch = curl_init($url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$response = curl_exec($ch);
+curl_close($ch);
+$url = 'http://localhost/rent/api/v1/car/cars';
+$ch = curl_init($url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$response = curl_exec($ch);
+curl_close($ch);
+$results = json_decode($response,JSON_PRETTY_PRINT);
+$results = $results['datas'];
+
+$date = new DateTime();
+$current_date = $date->format('Y-m-d');
+?>
+
 <body>
 
-<div class="app-card-header p-3 main-content container-fluid">
-    <div class="row justify-content-between align-items-center line">
-        <div class="col-auto">
-            <h6 class="app-card-title">
-                Reservation Car
-            </h6>
+<section class="vh-100">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 text-black">
+                <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+
+                    <form style="width: 23rem;">
+                        <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;"><b>Book Your Favorite Car!<img src="public/images/stars.png" width="32" class="img-fluid" alt=""></b></h3>
+                        <div class="form-outline mb-4 d-block">
+                            <label class="form-label" for="form2Example18">Your Name</label>
+                            <input type="text" id="firstname" value="" disabled="disabled" class="form-control form-control-lg" />
+                        </div>
+                        <div class="form-outline mb-4 d-block" id="cars">
+                            <label class="form-label" for="form2Example18">Car</label>
+                            <select name="" id="car" class="form-control form-control-lg">
+                                <option value="null">Select</option>
+                                <?php foreach ($results as $result):?>
+                                    <option value="<?=$result['carId']?>"><?=$result['carName'] . " "."( {$result['numberRegistation'] })" . " "."({$result['carMerk']})";?></option>
+                                <?php endforeach;?>
+                            </select>
+                        </div>
+                        <div class="form-outline mb-4 d-block">
+                            <label class="form-label" for="form2Example18">Start Date</label>
+                            <input type="date" id="startDate" class="form-control form-control-lg" value="<?=$current_date;?>" />
+                        </div>
+                        <div class="form-outline mb-4 d-block">
+                            <label class="form-label" for="form2Example18">End Date</label>
+                            <input type="date" id="endDate" class="form-control form-control-lg" value="<?=$current_date;?>" />
+                        </div>
+
+                        <div class="pt-1 mb-4">
+                            <button class="btn btn-primary btn-lg btn-block w-100" type="button" id="btn-login" onclick="saveBook()">Book Now</button>
+                        </div>
+
+
+
+                    </form>
+
+                </div>
+
+            </div>
+            <div class="col-sm-6 px-0 d-none d-sm-block">
+                <img src="public/images/login-wallpaper.jpg"
+                     alt="Login image" class="w-100 vh-100" style="object-fit: cover; object-position: left;">
+            </div>
         </div>
     </div>
-</div>
+</section>
 
-<div class="app-card-body pb-3 main-content container-fluid">
-    <form method="POST" id="new">
 
-        <div class="space_line row">
-            <div class="col-sm-2 col-lg-2">
-                Name
-            </div>
-            <div class="col-sm-2 col-lg-3">
-                <input type="text" name="name" id="name" class="form-control square" required="required">
-            </div>
-        </div>
-        <div class="space_line row">
-            <div class="col-sm-2 col-lg-2">
-                KK
-            </div>
-            <div class="col-sm-2 col-lg-2">
-                <input type="text" name="kk" id="kk" class="form-control square">
-            </div>
-            <div class="col-sm-2 col-lg-2" align="right">
-                KTP/ID
-            </div>
-            <div class="col-sm-2 col-lg-2">
-                <input type="text" name="ktp" id="ktp" class="form-control square">
-            </div>
-        </div>
-        <div class="col-lg-12" id="hitung"></div>
-        <div class="space_line row">
-            <div class="col-sm-2 col-lg-2">
-                Note
-            </div>
-            <div class="col-sm-5 col-lg-5">
-                <textarea  name="note" id="note" class="form-control square textarea-edit"></textarea>
-            </div>
-        </div>
-        <div class="space_line row">
-            <div class="col-sm-2 col-lg-2">
-                Status
-            </div>
-            <div class="col-sm-2 col-lg-2">
-                <select id="status" name="status" class="choices form-select square bg-white" required="required">
-                    <option value="0">Active</option>
-                    <option value="2">Not Active</option>
-                </select>
-            </div>
-        </div>
-        <div class="space_line row">
-            <div class="col-lg-12">
-                <button type="submit" id="btn" class="btn btn-sm btn-success btn-custom">Save</button>
-            </div>
-        </div>
-    </form>
+<!-- Optional JavaScript; choose one of the two! -->
 
-</div>
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+-->
+
+<script src="public/js/login.js"></script>
+<script src="public/js/home.js"></script>
+<script src="public/js/book.js"></script>
 
 </body>

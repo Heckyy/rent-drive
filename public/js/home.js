@@ -34,13 +34,26 @@ $(document).ready(function() {
             btnSign.classList.add("d-none");
             btnLogin.classList.add("d-none");
     }
-
     var hello = document.getElementById("hello");
     hello.innerHTML = localStorage.getItem("username");
+    getTransaction();
 
 });
-
 function btnLogout(){
     localStorage.removeItem("username");
     window.location.href = "home";
+}
+function bookProcess(){
+ if(localStorage.getItem("username")){
+        window.location.href="book";
+ }else{
+     window.location.href="login";
+ }
+}
+
+function getTransaction(){
+    var dataTransaction = document.getElementById("data-transaction");
+    $.ajax({
+        url:
+    })
 }

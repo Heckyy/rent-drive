@@ -135,9 +135,9 @@ $this_date = $date->format("Y-m-d");
 
                         </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="data-transaction">
                         <tr>
-                            <th scope="row" class="">1</th>
+                            <td scope="row" class="">1</td>
                             <td class=""> Jazz</td>
                             <td class="">Honda</td>
                             <td>01-05-2023</td>
@@ -150,8 +150,8 @@ $this_date = $date->format("Y-m-d");
 
                             </td>
                         </tr>
-                        <tr>
-                            <th scope="row" class="">2</th>
+                        <tr >
+                            <td scope="row" class="">2</td>
                             <td class="">Ertiga</td>
                             <td class="">Suzuki</td>
                             <td>01-05-2023</td>
@@ -161,7 +161,6 @@ $this_date = $date->format("Y-m-d");
                             <td>
                                 <button class="btn btn-primary bg-transparent"><img src="public/images/edit.png" alt="" width="20"></button>
                                 <button class="btn btn-primary bg-transparent"><img src="public/images/trash.png" alt="" width="20"></button>
-
                             </td>
                         </tr>
                         </tbody>
@@ -171,7 +170,7 @@ $this_date = $date->format("Y-m-d");
             <div class="container mb-5">
                 <div class="row  justify-content-end">
                     <div class="col-lg-1">
-                        <button class="btn btn-primary button-primary ">Book</button>
+                        <button class="btn btn-primary button-primary "onclick="bookProcess()">Book</button>
                     </div>
                 </div>
             </div>

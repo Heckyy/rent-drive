@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1537fc65-1ae3-4dec-8666-90a1e570b964" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/controllers/loginController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/login-wallpaper.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/book.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/bookController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/bookController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/book.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/book.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/home.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,6 +80,8 @@
       <workItem from="1685002839449" duration="131000" />
       <workItem from="1686193345083" duration="7712000" />
       <workItem from="1686231378198" duration="20000" />
+      <workItem from="1686275910370" duration="15208000" />
+      <workItem from="1686313837295" duration="692000" />
     </task>
     <servers />
   </component>

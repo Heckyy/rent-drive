@@ -124,45 +124,23 @@ $this_date = $date->format("Y-m-d");
                     <table class="table">
                         <thead>
                         <tr>
-                            <th scope="col">No</th>
-                            <th scope="col">Car</th>
-                            <th scope="col">Merk</th>
-                            <th scope="col">Start Date</th>
-                            <th scope="col">End Date</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Status</th>
-                            <th scope="col">Action</th>
+                            <th scope="col text-center">No</th>
+                            <th scope="col text-center">Id Transaction</th>
+                            <th scope="col text-center">Car</th>
+                            <th scope="col text-center">Merk</th>
+                            <th scope="col text-center">Number Registration</th>
+                            <th scope="col text-center">Price Date</th>
+                            <th scope="col text-center">Start Date</th>
+                            <th scope="col text-center">End Date</th>
+                            <th scope="col text-center">Total Bill</th>
+                            <th scope="col text-center">Status</th>
+                            <th scope="col text-center">Action</th>
 
                         </tr>
                         </thead>
                         <tbody id="data-transaction">
-                        <tr>
-                            <td scope="row" class="">1</td>
-                            <td class=""> Jazz</td>
-                            <td class="">Honda</td>
-                            <td>01-05-2023</td>
-                            <td>10-05-2023</td>
-                            <td>Rp.1.500.000</td>
-                            <td class="text-success">On Process</td>
-                            <td>
-                                <button class="btn btn-primary bg-transparent"><img src="public/images/edit.png" alt="" width="20"></button>
-                                <button class="btn btn-primary bg-transparent"><img src="public/images/trash.png" alt="" width="20"></button>
 
-                            </td>
-                        </tr>
-                        <tr >
-                            <td scope="row" class="">2</td>
-                            <td class="">Ertiga</td>
-                            <td class="">Suzuki</td>
-                            <td>01-05-2023</td>
-                            <td>03-05-2023</td>
-                            <td>Rp.500.000</td>
-                            <td class="text-primary">Finished</td>
-                            <td>
-                                <button class="btn btn-primary bg-transparent"><img src="public/images/edit.png" alt="" width="20"></button>
-                                <button class="btn btn-primary bg-transparent"><img src="public/images/trash.png" alt="" width="20"></button>
-                            </td>
-                        </tr>
+
                         </tbody>
                     </table>
                 </div>

@@ -36,8 +36,7 @@ $(document).ready(function() {
     }
     var hello = document.getElementById("hello");
     hello.innerHTML = localStorage.getItem("username");
-    // getTransaction();
-
+    getTransaction();
 });
 function btnLogout(){
     localStorage.removeItem("username");
@@ -51,9 +50,74 @@ function bookProcess(){
  }
 }
 
-// function getTransaction(){
-//     var dataTransaction = document.getElementById("data-transaction");
-//     $.ajax({
-//         url:
-//     })
-// }
+function getTransaction(){
+    var dataTransaction = document.getElementById("data-transaction");
+    var data = {
+        username:localStorage.getItem("username")
+    }
+    $.ajax({
+        url:"http://localhost/rent/api/v1/transaction/transaction",
+        method: "POST",
+        data : data,
+        success:function (response){
+            var html = "";
+            var result = JSON.parse(response);
+            var no = 1;
+            if(result.data != "null"){
+
+            $(result).each(function(index, element){
+                var id = element.idTransaction
+                 html += '<tr >\n' +
+                     '                            <td scope="row" class="text-center">'+no+'</td>\n' +
+                     '                            <td class="text-center">'+element.idTransaction+'</td>\n' +
+                     '                            <td class="text-center">'+element.carName+'</td>\n' +
+                     '                            <td class="text-center">'+element.carMerk+'</td>\n' +
+                     '                            <td class="text-center">'+element.numberRegistration+'</td>\n' +
+                     '                            <td class="text-center">Rp.'+element.priceDate+'</td>\n' +
+                     '                            <td class="text-center">'+element.startDate+'</td>\n' +
+                     '                            <td class="text-center">'+element.endDate+'</td>\n' +
+                     '                            <td class="text-center">Rp. '+element.totalBill+'</td>\n' +
+                     '                            <td class="text-primary text-center">Booked</td>\n' +
+                     '                            <td>\n' +
+                     '                                <button class="btn btn-primary bg-transparent text-center"><img src="public/images/edit.png" alt="" width="20"></button>\n' +
+                     '                                <button id="deleteBook" value="'+id+'" onclick="deleteBook({value})" class="btn btn-primary bg-transparent text-center"><img src="public/images/trash.png" alt="" width="20"></button>\n' +
+                     '                            </td>\n' +
+                     '                        </tr>'
+
+                 no++;
+            });
+            }else{
+                html += "<tr>Tidak Ada Data!</tr>"
+            }
+            dataTransaction.innerHTML = html;
+        }
+    })
+}
+
+function deleteBook(id){
+    var idTransaction =id.value;
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            $.ajax({
+                url:"http://localhost/rent/api/v1/transaction/delete/"+idTransaction,
+                method : "GET",
+                success:function (response) {
+                    var  result = JSON.parse(response)
+                     alert(result.message)
+                    window.location.href = "home";
+                }
+            });
+
+        }
+    })
+
+
+}

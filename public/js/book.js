@@ -19,12 +19,9 @@ $.ajax({
             }
 
         })
-
-
-
-
     }
 })
+    localStorage.setItem("name",userValue);
 });
 
 function saveBook(){
@@ -38,7 +35,6 @@ function saveBook(){
         "startDate":startDate,
         "endDate":endDate,
     }
-
     $.ajax({
         url:"http://localhost/rent/api/v1/transaction/store",
         method:"post",

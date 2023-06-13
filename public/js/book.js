@@ -32,7 +32,6 @@ function saveBook(){
     var carId = document.getElementById("car").value;
     var startDate  = document.getElementById("startDate").value;
     var endDate  = document.getElementById("endDate").value;
-
     var data = {
         "name":name,
         "carId":carId,
@@ -40,6 +39,23 @@ function saveBook(){
         "endDate":endDate,
     }
 
+    $.ajax({
+        url:"http://localhost/rent/api/v1/transaction/store",
+        method:"post",
+        data : data,
+        success:function (response){
+            var result = JSON.parse(response);
+            // console.log(result.status);
+            if(result.status =="success"){
+                alert(result.message);
+                window.location.href = "home";
+            }else{
+                alert(result.message);
+                window.location.href = "book";
+            }
+        }
+
+    })
 
 
 }

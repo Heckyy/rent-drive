@@ -36,7 +36,7 @@ $(document).ready(function() {
     }
     var hello = document.getElementById("hello");
     hello.innerHTML = localStorage.getItem("username");
-    getTransaction();
+    // getTransaction();
 
 });
 function btnLogout(){
@@ -51,9 +51,9 @@ function bookProcess(){
  }
 }
 
-function getTransaction(){
-    var dataTransaction = document.getElementById("data-transaction");
-    $.ajax({
-        url:
-    })
-}
+// function getTransaction(){
+//     var dataTransaction = document.getElementById("data-transaction");
+//     $.ajax({
+//         url:
+//     })
+// }

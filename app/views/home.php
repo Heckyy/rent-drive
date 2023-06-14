@@ -135,12 +135,9 @@ $this_date = $date->format("Y-m-d");
                             <th scope="col text-center">Total Bill</th>
                             <th scope="col text-center">Status</th>
                             <th scope="col text-center">Action</th>
-
                         </tr>
                         </thead>
                         <tbody id="data-transaction">
-
-
                         </tbody>
                     </table>
                 </div>

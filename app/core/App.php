@@ -40,6 +40,9 @@ class App
             require_once("app/controllers/" . $this->controller . "Controller.php");
             $this->controller = new $this->controller();
 
+            if(!empty($explode_url)){
+                $this->params = array_values($explode_url);
+            }
             call_user_func_array([$this->controller, $this->method], $this->params);
         }
     }

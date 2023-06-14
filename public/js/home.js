@@ -79,7 +79,7 @@ function getTransaction(){
                      '                            <td class="text-center">Rp. '+element.totalBill+'</td>\n' +
                      '                            <td class="text-primary text-center">Booked</td>\n' +
                      '                            <td>\n' +
-                     '                                <button class="btn btn-primary bg-transparent text-center"><img src="public/images/edit.png" alt="" width="20"></button>\n' +
+                     '                                <button value="'+id+'" onclick="editBook(this)" class="btn btn-primary bg-transparent text-center"><img src="public/images/edit.png" alt="" width="20" id="editBook"  ></button>\n' +
                      '                                <button id="deleteBook" value="'+id+'" onclick="deleteBook({value})" class="btn btn-primary bg-transparent text-center"><img src="public/images/trash.png" alt="" width="20"></button>\n' +
                      '                            </td>\n' +
                      '                        </tr>'
@@ -119,5 +119,8 @@ function deleteBook(id){
         }
     })
 
-
+}
+function editBook(id){
+    var idTransaction =id.value;
+    window.location.href="edit/index/"+idTransaction;
 }

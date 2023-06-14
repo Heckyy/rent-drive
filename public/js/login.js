@@ -13,6 +13,7 @@ function submitLogin() {
         method:"POST",
         data:datas,
         success:function (response){
+            console.log(response);
             var result = JSON.parse(response);
             if(result.status == "success"){
                 localStorage.setItem("username",username);

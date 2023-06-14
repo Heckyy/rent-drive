@@ -22,22 +22,42 @@
 
                         <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in</h3>
 
-                        <div class="form-outline mb-4">
-                            <input type="text" id="username" class="form-control form-control-lg" />
+                        <div class="form-outline mb-1">
+                            <label class="form-label" for="form2Example18">ID Card</label>
+                            <input type="text" id="id-card" pattern="[0-9]*" class="form-control form-control-lg" />
+                        </div>
+                        <div class="form-outline mb-1">
+                            <label class="form-label" for="form2Example18">First Name</label>
+                            <input type="text" id="first-name" class="form-control form-control-lg" />
+                        </div>
+                        <div class="form-outline mb-1">
+                            <label class="form-label" for="form2Example18">Last Name</label>
+                            <input type="text" id="last-name" class="form-control form-control-lg" />
+                        </div>
+                        <div class="form-outline mb-1">
+                            <label class="form-label" for="form2Example18">Birth Date</label>
+                            <input type="date" id="birth-date" class="form-control form-control-lg" />
+                        </div>
+                        <div class="form-outline mb-1">
+                            <label class="form-label" for="form2Example18">Address</label>
+                            <input type="text" id="address" class="form-control form-control-lg" />
+                        </div>
+                        <div class="form-outline mb-1">
+                            <label class="form-label" for="form2Example18">City</label>
+                            <input type="text" id="city" class="form-control form-control-lg" />
+                        </div>
+                        <div class="form-outline mb-1">
                             <label class="form-label" for="form2Example18">Username</label>
+                            <input type="text" id="username" class="form-control form-control-lg" />
                         </div>
-
-                        <div class="form-outline mb-4">
-                            <input type="password" id="password" class="form-control form-control-lg" />
+                        <div class="form-outline mb-2">
                             <label class="form-label" for="form2Example28">Password</label>
+                            <input type="password" id="password" class="form-control form-control-lg" />
                         </div>
 
-                        <div class="pt-1 mb-4">
-                            <button class="btn btn-info btn-lg btn-block" type="button" id="btn-login" onclick="submitLogin()">Login</button>
+                        <div class="pt-1 mb-1">
+                            <button class="btn btn-info btn-lg btn-block" type="button" id="btn-register" disabled onclick="submitRegister()">Register</button>
                         </div>
-
-                        <p>Don't have an account? <a href="register" class="link-info">Register here</a></p>
-
                     </form>
 
                 </div>
@@ -64,5 +84,6 @@
 -->
 
 <script src="public/js/login.js"></script>
+<script src="public/js/register.js"></script>
 </body>
 </html>

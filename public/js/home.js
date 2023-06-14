@@ -60,6 +60,7 @@ function getTransaction(){
         method: "POST",
         data : data,
         success:function (response){
+            console.log(response);
             var html = "";
             var result = JSON.parse(response);
             var no = 1;

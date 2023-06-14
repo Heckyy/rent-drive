@@ -41,7 +41,7 @@
 
 
                 <div class="navbar-nav ">
-                    <button class="btn btn-primary me-lg-3 button-secondary bg-transparent text-primary" id="btn-signIn">Sign In</button>
+                    <a href="register"> <button class="btn btn-primary me-lg-3 button-secondary bg-transparent text-primary" id="btn-signIn">Sign In</button></a>
                     <a href="http://localhost/rent-drive/login"> <button class="btn btn-primary button-primary " id="btn-login">login</button> </a>
                 </div>
                 <h6 class="me-2 text-center d-none" id="user-info"> <b> Welcome! <span id=hello></span></b></h6>

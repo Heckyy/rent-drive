@@ -11,7 +11,6 @@ $response = curl_exec($ch);
 curl_close($ch);
 $results = json_decode($response,JSON_PRETTY_PRINT);
 $results = $results['datas'];
-
 $date = new DateTime();
 $current_date = $date->format('Y-m-d');
 ?>

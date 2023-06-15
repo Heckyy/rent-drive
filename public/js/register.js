@@ -2,9 +2,6 @@ $(document).ready(function () {
 
 });
 
-
-
-
 function submitRegister(){
     var idCard = document.getElementById("id-card").value;
     var firstName = document.getElementById("first-name").value;
@@ -24,7 +21,6 @@ function submitRegister(){
         username:username,
         password:password,
     }
-
     $.ajax({
         url:"http://localhost/rent/api/v1/user/register",
         method : "POST",

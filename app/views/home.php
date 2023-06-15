@@ -1,8 +1,6 @@
 <?php
 $date = new DateTime();
 $this_date = $date->format("Y-m-d");
-
-
 ?>
 
 
@@ -29,9 +27,6 @@ $this_date = $date->format("Y-m-d");
 
 
     <!-- Search Section -->
-    <?php
-
-    ?>
     <section class="search-section">
         <div class="container">
             <div class="row bg-light box">
@@ -147,10 +142,51 @@ $this_date = $date->format("Y-m-d");
                     <div class="col-lg-1">
                         <button class="btn btn-primary button-primary "onclick="bookProcess()">Book</button>
                     </div>
+                    <div class="col-lg-2">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#paymentModal" data-bs-whatever="@mdo">Add Payment</button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Payment <img src="public/images/money.png" width="24" class="img-fluid" alt=""> </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">ID Transaction:</label>
+                            <select name="" id="id-transaction" class="form-control form-control-lg" onchange="changeBill()">
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">Total Bill:</label>
+                            <input type="text" value="" id="total-bill" class="form-control form-control-lg" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Payment Method:</label>
+                            <select name="" id="payment-method" class="form-control form-control-lg" onchange="methodPayment()">
+                            <option value="null">Select</option>
+                            <option value="transfer-bank">Transfer Bank</option>
+                            <option value="cash">Cash</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 d-none" id="info-bank">
+                            <label for="recipient-name" class="col-form-label">Info Bank:</label>
+                            <input type="text" value="BCA : 1230494959 (RENTDRIVE)"  class="form-control form-control-lg" disabled>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="payment()">Pay Now!</button>
+                </div>
+            </div>
+        </div>
+    </div>
 <!--End My Reservation Section-->
 
 <!--Script-->

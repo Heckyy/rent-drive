@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    getIdTransaction();
     $.ajax({
         url:"http://localhost/rent/api/v1/car/cars",
         method:"GET",
@@ -13,7 +14,6 @@ $(document).ready(function() {
                     '                                    <div class="card-body">\n' +
                     '                                        <h5 class="card-title">'+element.carName+'</h5>\n' +
                     '                                        <p class="card-text">'+element.description+'</p>\n' +
-                    '                                        <a href="#" class="btn btn-primary">Buy Now</a>\n' +
                     '                                    </div>\n' +
                     '                                </div>\n' +
                     '                            </div>';
@@ -60,9 +60,10 @@ function getTransaction(){
         method: "POST",
         data : data,
         success:function (response){
-            console.log(response);
+
             var html = "";
             var result = JSON.parse(response);
+
             var no = 1;
             if(result.data != "null"){
 
@@ -78,7 +79,7 @@ function getTransaction(){
                      '                            <td class="text-center">'+element.startDate+'</td>\n' +
                      '                            <td class="text-center">'+element.endDate+'</td>\n' +
                      '                            <td class="text-center">Rp. '+element.totalBill+'</td>\n' +
-                     '                            <td class="text-primary text-center">Booked</td>\n' +
+                     '                            <td class="text-center">'+element.status+'</td>\n' +
                      '                            <td>\n' +
                      '                                <button value="'+id+'" onclick="editBook(this)" class="btn btn-primary bg-transparent text-center"><img src="public/images/edit.png" alt="" width="20" id="editBook"  ></button>\n' +
                      '                                <button id="deleteBook" value="'+id+'" onclick="deleteBook({value})" class="btn btn-primary bg-transparent text-center"><img src="public/images/trash.png" alt="" width="20"></button>\n' +
@@ -124,4 +125,85 @@ function deleteBook(id){
 function editBook(id){
     var idTransaction =id.value;
     window.location.href="edit/index/"+idTransaction;
+}
+
+function methodPayment(){
+    var methodPayment = document.getElementById('payment-method').value;
+    if(methodPayment=="transfer-bank"){
+        var infoBank = document.getElementById("info-bank");
+        infoBank.classList.remove("d-none");
+    }else{
+        var infoBank = document.getElementById("info-bank");
+        infoBank.classList.add("d-none");
+    }
+}
+
+function getIdTransaction(){
+    var idTransaction = document.getElementById('id-transaction');
+    var data = {
+        username: localStorage.getItem("username")
+    }
+    var html="";
+    $.ajax({
+        url:"http://localhost/rent/api/v1/payment/get",
+        method:"POST",
+        data :data,
+        success : function (response){
+            $('id-transaction').empty();
+            var option1 = $('<option>', {
+                value: 'null',
+                text: 'Select'
+            });
+            $(idTransaction).append(option1);
+            var result = JSON.parse(response);
+            $(result).each(function(index, element) {
+            var option = $('<option>', {
+                value: `${element.id}`,
+                text: `${element.id}`
+            });
+            $(idTransaction).append(option);
+            });
+        }
+    });
+}
+
+function changeBill(){
+    var idTransaction = document.getElementById('id-transaction').value;
+    var totalBill = document.getElementById("total-bill");
+    var data = {
+        idTransaction : idTransaction
+    }
+    $.ajax({
+        url:"http://localhost/rent/api/v1/payment/info",
+        method:"POST",
+        data:data,
+        success:function (response){
+                var result = JSON.parse(response);
+                totalBill.value = "Rp. " +result.total_bill;
+        }
+    })
+}
+
+function payment(){
+    var idTransaction = document.getElementById('id-transaction').value;
+    var data = {
+        idTransaction : idTransaction
+    }
+
+    $.ajax({
+        url:"http://localhost/rent/api/v1/payment/payment",
+        method : "POST",
+        data : data,
+        success:function (response){
+            var result= JSON.parse(response);
+            if(result.status == "success"){
+                alert(result.message);
+                window.location.href = "home";
+            }else{
+                alert(result.message);
+            }
+        }
+
+    });
+
 }

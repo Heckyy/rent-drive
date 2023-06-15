@@ -18,7 +18,9 @@ function submitLogin() {
             if(result.status == "success"){
                 localStorage.setItem("username",username);
                 window.location.href = "home";
-
+            }else{
+                alert(result.message);
+                window.location.href = "login";
             }
         }
 

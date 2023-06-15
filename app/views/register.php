@@ -56,7 +56,7 @@
                         </div>
 
                         <div class="pt-1 mb-1">
-                            <button class="btn btn-info btn-lg btn-block" type="button" id="btn-register" disabled onclick="submitRegister()">Register</button>
+                            <button class="btn btn-info btn-lg btn-block" type="button" id="btn-register"  onclick="submitRegister()">Register</button>
                         </div>
                     </form>
 
